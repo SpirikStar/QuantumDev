@@ -1,0 +1,188 @@
+body, html {
+  font-family: "Gilroy", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(114, 78, 158) 50%, rgb(0, 0, 0) 100%);
+  position: fixed;
+  z-index: 100;
+  border-bottom: 1px solid #232323;
+}
+.header__content {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__content .btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__content .btns p {
+  opacity: 0.6;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.header__content .btns p.active {
+  opacity: 1;
+}
+.header__content .btns .toggle {
+  position: relative;
+  width: 42px;
+  height: 21px;
+  background-color: #dcdcdc;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.header__content .btns .toggle-ball {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #7852A6;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: left 0.3s;
+}
+.header__content .btns .toggle.active .toggle-ball {
+  left: 24px;
+}
+.header__content .infos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header__content .infos .menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header__content .infos .menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.header__content .infos .menu a:hover {
+  color: #7852A6;
+  transition: 0.3s;
+}
+.header__content .infos .personal__account {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #7852A6;
+  background-color: rgba(120, 82, 166, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+.header__content .infos .personal__account:hover {
+  background-color: rgba(120, 82, 166, 0.4);
+  transition: 0.3s;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(114, 78, 158) 0%, rgb(0, 0, 0) 100%);
+  background-size: 200% 200%;
+  animation: gradientPulse 10s ease-in-out infinite;
+}
+.banner__content {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner__content .infos {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.banner__content .infos .discount {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.banner__content .infos .discount span {
+  background-color: #7852A6;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 60px;
+  font-size: 18px;
+}
+.banner__content .infos h1 {
+  margin-top: 40px;
+  font-size: 86px;
+  color: #fff;
+  font-weight: 700;
+}
+.banner__content .infos p {
+  color: #fff;
+  font-size: 26px;
+  margin-top: 68px;
+}
+.banner__content .infos button {
+  background-color: #fff;
+  border-radius: 60px;
+  padding: 15px 30px;
+  border: none;
+  color: #7852A6;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.banner__content .infos button:hover {
+  background-color: #7852A6;
+  color: #fff;
+  transition: 0.3s;
+}
+.banner__content .infos a {
+  color: #fff;
+  margin-top: 60px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.banner__content .infos a:hover {
+  color: #7852A6;
+  transition: 0.3s;
+}
+.banner__content .img {
+  width: 48%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.banner__content .img img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes gradientPulse {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 20% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

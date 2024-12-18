@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша команда</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Заголовки */
+        h1,
+        h2,
+        h3 {
+            color: #000;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        h3 {
+            color: #317773;
+            font-size: 1.5rem;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Секция особенностей */
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .features li::before {
+            content: "⦿";
+            color: #317773;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Команда */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .team-member h4 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+        }
+
+        .team-member p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .team-member a {
+            text-decoration: none;
+            color: #317773;
+            font-weight: bold;
+        }
+
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Заголовок -->
+        <h1>Наша команда</h1>
+        <p class="intro">
+            Мы — команда профессионалов, объединенных одной целью: превращать идеи в успешные проекты.
+            <br>
+            В Quantum Dev работают разработчики, дизайнеры и менеджеры, которые знают, как создать эффективные и
+            стильные решения для бизнеса и людей.
+        </p>
+
+        <!-- Секция сотрудников -->
+        <h2>Сотрудники</h2>
+        <div class="features">
+            <h3>Что нас отличает?</h3>
+            <ul>
+                <li><strong>Опыт и экспертиза</strong> – многолетний опыт в разработке проектов разного масштаба</li>
+                <li><strong>Любовь к инновациям</strong> – используем современные технологии и лучшие практики</li>
+                <li><strong>Индивидуальный подход</strong> – мы работаем с каждым клиентом как с партнером</li>
+            </ul>
+        </div>
+
+        <!-- Карточки сотрудников -->
+        <div class="team">
+            <div class="team-member">
+                <img src="photo1.jpg" alt="Федор Федотов">
+                <h4>Федор Федотов</h4>
+                <p>Руководитель</p>
+                <a href="#">Посмотреть ↗</a>
+            </div>
+            <div class="team-member">
+                <img src="photo1.jpg" alt="Федор Федотов">
+                <h4>Федор Федотов</h4>
+                <p>Руководитель</p>
+                <a href="#">Посмотреть ↗</a>
+            </div>
+            <div class="team-member">
+                <img src="photo2.jpg" alt="Алексей Спиридонов">
+                <h4>Алексей Спиридонов</h4>
+                <p>Руководитель</p>
+                <a href="#">Посмотреть ↗</a>
+            </div>
+            <div class="team-member">
+                <img src="photo2.jpg" alt="Алексей Спиридонов">
+                <h4>Алексей Спиридонов</h4>
+                <p>Руководитель</p>
+                <a href="#">Посмотреть ↗</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

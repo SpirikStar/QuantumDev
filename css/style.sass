@@ -102,6 +102,8 @@ body
 .base
     width: 100%
     height: 100%
+    &.background
+        background-color: #fff
     &__content
         width: 90%
         margin: 0 auto
@@ -147,3 +149,81 @@ body
                     color: #232323
                     font-size: 18px
                     font-weight: 500
+        & .team
+            display: flex
+            justify-content: space-between
+            gap: 60px
+            margin-top: 40px
+            &__left
+                width: 50%
+                &-text
+                    color: #232323
+                    font-size: 20px
+                    font-weight: 400
+                &-title
+                    margin-top: 60px
+                    font-size: 36px
+                    color: #232323
+                    font-weight: 600
+                &-subtitle
+                    margin-top: 40px
+                    color: #317773
+                    font-size: 26px
+                    font-weight: 500
+                &-points
+                    margin-top: 25px
+                    display: flex
+                    flex-direction: column
+                    gap: 25px
+                    & .point
+                        height: 40px
+                        display: flex
+                        align-items: center
+                        gap: 15px
+                        &__circle
+                            width: 40px
+                            height: 40px
+                            border-radius: 60px
+                            background-color: #317773
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                        &__text
+                            color: #232323
+                            font-size: 18px
+                            font-weight: 500
+            &__right
+                display: flex
+                flex-wrap: wrap
+                gap: 25px
+                & .card
+                    display: flex
+                    flex-direction: column
+                    &__img
+                        width: 200px
+                        height: 180px
+                        object-fit: cover
+                        border-radius: 5px
+                    &__content
+                        margin-top: 15px
+                        display: flex
+                        flex-direction: column
+                        gap: 5px
+                        &-name
+                            color: #232323
+                            font-size: 16px
+                            font-weight: 600
+                        &-position
+                            color: #232323
+                            opacity: .6
+                            font-size: 14px
+                            font-weight: 500
+                    &__link
+                        margin-top: 20px
+                        color: #317773
+                        font-weight: 500
+                        display: flex
+                        align-items: center
+                        gap: 2px
+                        font-size: 16px
+                        text-decoration: none

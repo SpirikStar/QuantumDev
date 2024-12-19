@@ -123,6 +123,7 @@ body {
 .base {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .base.background {
   background-color: #fff;
@@ -156,10 +157,10 @@ body {
   gap: 60px;
 }
 .base__content .form__left {
-  width: 50%;
+  width: 45%;
 }
 .base__content .form__left-text {
-  font-size: 20px;
+  font-size: 22px;
   color: #232323;
   font-weight: 400;
 }
@@ -187,7 +188,7 @@ body {
   text-decoration: none;
 }
 .base__content .form__right {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -196,7 +197,7 @@ body {
   resize: none;
 }
 .base__content .form__right__input, .base__content .form__right__textarea {
-  width: 100%;
+  width: 99%;
   height: 50px;
   border: none;
   border-bottom: 1px solid #317773;
@@ -374,8 +375,8 @@ body {
   flex-direction: column;
 }
 .base__content .team__right .card__img {
-  width: 200px;
-  height: 180px;
+  width: 250px;
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -388,13 +389,13 @@ body {
 }
 .base__content .team__right .card__content-name {
   color: #232323;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 }
 .base__content .team__right .card__content-position {
   color: #232323;
   opacity: 0.6;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
 }
 .base__content .team__right .card__link {
@@ -406,4 +407,27 @@ body {
   gap: 2px;
   font-size: 16px;
   text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.footer p {
+  color: #232323;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.6;
+}
+.footer a {
+  color: #232323;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

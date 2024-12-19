@@ -137,6 +137,18 @@ body {
   color: #232323;
   font-weight: 600;
 }
+.base__content-subtitle {
+  margin-top: 40px;
+  font-size: 36px;
+  color: #317773;
+  font-weight: 600;
+}
+.base__content-description {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #232323;
+  width: 60%;
+}
 .base__content .block__left, .base__content .block__right {
   margin-top: 40px;
   display: flex;

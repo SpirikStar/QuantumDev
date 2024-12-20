@@ -479,6 +479,9 @@ body {
   .base__content-title {
     font-size: 2rem;
   }
+  .base__content .block__right {
+    margin-top: 25px;
+  }
   .base__content .block__left, .base__content .block__right {
     width: 100%;
   }

@@ -68,6 +68,7 @@ body
         & .infos
             margin-top: 40px
             display: flex
+            flex-wrap: wrap
             gap: 60px
             &__row
                 display: flex
@@ -354,15 +355,34 @@ body
         text-align: center
 
 @media (max-width: 800px)
-    .header .logo
-        display: none
+    .container .header__content
+        position: relative
+        & .logo
+            display: none
+        & .btn
+            position: absolute
+            right: 0
     .banner__content
         & .infos
-            flex-wrap: wrap
             gap: 15px
         & .title
             width: 100%
-@media (max-width: 600px)
-    .banner__content
-        & .title
-            font-size: 52px
+            font-size: 2.5rem
+    .banner__content .infos__row
+        width: 100%
+        gap: 10px
+        &-text
+            font-size: 0.8rem
+            width: 100%
+        &-icon
+            background: none
+            & svg 
+                background-color: #fff
+                padding: 5px
+                border-radius: 5px
+
+
+// @media (max-width: 600px)
+//     .banner__content
+//         & .title
+//             font-size: 48px

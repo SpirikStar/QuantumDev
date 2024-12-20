@@ -476,11 +476,17 @@ body {
     width: 100%;
     font-size: 2.5rem;
   }
+  .base__content-title {
+    font-size: 2rem;
+  }
   .base__content .block__left, .base__content .block__right {
     width: 100%;
   }
   .base__content .block__left .arrow svg, .base__content .block__right .arrow svg {
     width: 100%;
+  }
+  .base__content .block__left .title, .base__content .block__right .title {
+    font-size: 1.5rem;
   }
   .base__content__position {
     flex-direction: column;

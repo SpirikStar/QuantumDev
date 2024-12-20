@@ -488,8 +488,15 @@ body {
   .base__content .block__left .title, .base__content .block__right .title {
     font-size: 1.5rem;
   }
+  .base__content .block__left .description, .base__content .block__right .description {
+    font-size: 1rem;
+  }
   .base__content__position {
     flex-direction: column;
+  }
+  .base__content__points {
+    margin-top: 25px;
+    gap: 15px;
   }
   .base__content__points .point__circle {
     background: none;

@@ -483,16 +483,55 @@ body {
     font-size: 2rem;
   }
   .base__content .team {
+    margin-top: 25px;
     flex-direction: column;
+    gap: 25px;
   }
   .base__content .team__left {
     width: 100%;
   }
   .base__content .team__left-title {
+    margin-top: 25px;
     font-size: 32px;
   }
   .base__content .team__left-subtitle {
+    margin-top: 15px;
     font-size: 24px;
+  }
+  .base__content .team__left-text {
+    font-size: 16px;
+  }
+  .base__content .team__left-points {
+    gap: 15px;
+  }
+  .base__content .team__left-points .point__circle {
+    background: none;
+  }
+  .base__content .team__left-points .point__circle svg {
+    background-color: #317773;
+    padding: 10px;
+    border-radius: 60px;
+  }
+  .base__content .team__left-points .point__text {
+    font-size: 14px;
+  }
+  .base__content .team__right {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .base__content .team__right .card__img {
+    width: 150px;
+    height: 100px;
+  }
+  .base__content .team__right .card__content-name {
+    font-size: 16px;
+    height: 40px;
+  }
+  .base__content .team__right .card__content-position {
+    font-size: 14px;
   }
   .base__content .block__right {
     margin-top: 25px;

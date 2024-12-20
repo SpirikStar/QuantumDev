@@ -469,8 +469,8 @@ body {
   }
   .banner__content .infos__row-icon svg {
     background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 60px;
   }
   .banner__content .title {
     width: 100%;
@@ -481,6 +481,18 @@ body {
   }
   .base__content-title {
     font-size: 2rem;
+  }
+  .base__content .team {
+    flex-direction: column;
+  }
+  .base__content .team__left {
+    width: 100%;
+  }
+  .base__content .team__left-title {
+    font-size: 32px;
+  }
+  .base__content .team__left-subtitle {
+    font-size: 24px;
   }
   .base__content .block__right {
     margin-top: 25px;

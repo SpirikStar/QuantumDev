@@ -43,7 +43,7 @@ body, html {
   font-weight: 600;
 }
 .header__content .logo::before {
-  content: "🚀 Quantum Dev // ваш успех в каждом коде!";
+  content: "Quantum Dev // ваш успех в каждом коде!";
   margin-right: 10px;
   color: var(--text-color);
 }
@@ -109,7 +109,7 @@ body, html {
 }
 .section__content .points .point span.text {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .section__content .btn {
   margin-top: 60px;
@@ -134,10 +134,16 @@ body, html {
   font-size: 36px;
   font-weight: 600;
 }
+.section__content .subtitle.base-color {
+  color: var(--base-color);
+}
 .section__content .subtitle__text {
   margin-top: 40px;
   font-size: 26px;
   font-weight: 500;
+}
+.section__content .subtitle__text.base-color {
+  color: var(--base-color);
 }
 .section__content .text {
   font-size: 22px;
@@ -214,7 +220,7 @@ body, html {
     font-size: 16px;
   }
   .header__content .logo::before {
-    content: "🚀 Quantum Dev";
+    content: "Quantum Dev";
   }
   .header__content .contact {
     width: 150px;

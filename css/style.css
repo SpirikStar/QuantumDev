@@ -181,6 +181,15 @@ body, html {
   .section .points .point .text {
     font-size: 14px;
   }
+  .section__content .title {
+    font-size: 32px;
+  }
+  .section__content .subtitle {
+    font-size: 22px;
+  }
+  .section__content .text {
+    font-size: 16px;
+  }
   .section__content .flex {
     width: 100%;
   }

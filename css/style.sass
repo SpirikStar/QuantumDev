@@ -1,10 +1,17 @@
 *
     margin: 0
     padding: 0
+    transition: all 1s
+:root
+    --base-color: #317773
+    --background-color: #F5F7FA
+    --text-color: #232323
+    --white-color: #fff
 body, html
     margin: 0
     padding: 0
     font-family: 'Gilroy', sans-serif
+    background-color: var(--background-color)
 
 .header
     position: fixed
@@ -22,23 +29,62 @@ body, html
         margin: 0 auto
         width: 95%
         height: 100%
+        & .logo
+            font-size: 18px
+            font-weight: 600
+            &::before
+                content: '🚀 Quantum Dev // ваш успех в каждом коде!'
+                margin-right: 10px
+                color: var(--text-color)
+        & .contact
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 178px
+            height: 52px
+            border: 2px solid var(--base-color)
+            border-radius: 5px
+            color: var(--base-color)
+            text-decoration: none
+            font-weight: 600
+            font-size: 16px
+            transition: all 0.3s
+            &:hover
+                background-color: var(--base-color)
+                color: var(--white-color)
+                transition: all 0.3s
+
 .section
-    display: flex
-    justify-content: center
-    align-items: center
-    font-size: 32px
-    color: white
-    text-align: center
+    color: var(--text-color)
+    &.banner
+        background: url("../img/banner.svg") no-repeat center center/cover
+        & .title
+            font-size: 72px
+            font-weight: 700
+            margin-bottom: 20px
+            width: 700px
+    &__content
+        margin: 0 auto
+        width: 95%
 
-    &:nth-child(1)
-        background-color: #3498db
-    &:nth-child(2)
-        background-color: #e74c3c
-    &:nth-child(3)
-        background-color: #2ecc71
-    &:nth-child(4)
-        background-color: #9b59b6
+@media (max-width: 750px)
+    *
+        transition: all 1s
+    .header
+        &__content
+            & .logo
+                font-size: 16px
+                &::before
+                    content: '🚀 Quantum Dev'
+            & .contact
+                width: 150px
+                height: 42px
+                font-size: 14px
 
-/* Скрытие водяного знака */
+    .section
+        &.banner
+            & .title
+                font-size: 42px
+                width: 100%
 .fp-watermark
     display: none !important

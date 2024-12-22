@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Slider with Scrollable Content</title>
+    <title>Vertical Slider with Swiper.js</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <style>
         body,
@@ -14,7 +14,7 @@
             font-family: Arial, sans-serif;
             height: 100%;
             overflow: hidden;
-            /* Убираем стандартный скроллинг */
+            /* Убираем стандартный скролл */
         }
 
         .fixed-header {
@@ -36,7 +36,6 @@
             height: calc(100vh - 60px);
             /* Учитываем высоту заголовка */
             margin-top: 60px;
-            /* Сдвигаем слайды ниже заголовка */
         }
 
         .swiper-slide {
@@ -83,12 +82,6 @@
                         cursus ante dapibus diam.</p>
                     <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
                     <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -129,12 +122,14 @@
             direction: 'vertical', // Вертикальная прокрутка
             mousewheel: true, // Управление колесом мыши
             speed: 800, // Скорость анимации
-            freeMode: false, // Фиксированные слайды
-            touchReleaseOnEdges: true, // Разрешить прокрутку на границах
             keyboard: {
                 enabled: true, // Управление клавиатурой
                 onlyInViewport: true,
             },
+            touchReleaseOnEdges: true, // Разрешить выход за границы
+            nested: true, // Включить поддержку вложенного скроллинга
+            freeMode: false, // Отключаем свободный режим
+            preventInteractionOnTransition: false, // Убираем ограничения на взаимодействие при переходе
         });
     </script>
 </body>

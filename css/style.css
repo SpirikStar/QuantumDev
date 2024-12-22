@@ -225,8 +225,11 @@ body, html {
     font-size: 42px;
     width: 100%;
   }
-  .section .points .point .text {
-    font-size: 14px;
+  .section .points {
+    gap: 10px;
+  }
+  .section .points .point span.text {
+    font-size: 12px;
   }
   .section__content .title {
     font-size: 32px;

@@ -267,6 +267,9 @@ body, html {
   .section__content .subtitle__text {
     font-size: 14px;
   }
+  .section__content .check__projects {
+    margin-top: 40px;
+  }
   .section__content .flex {
     width: 100%;
   }

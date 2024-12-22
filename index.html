@@ -3,164 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Slider with Controlled Scroll</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            height: 100%;
-            overflow: hidden; /* Убираем стандартный скролл */
-        }
-
-        .fixed-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background: #222;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-
-        .swiper {
-            width: 100%;
-            height: calc(100vh - 60px); /* Учитываем высоту заголовка */
-            margin-top: 60px;
-        }
-
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            font-size: 18px;
-            color: #fff;
-            background: #333;
-            overflow-y: auto; /* Включаем прокрутку внутри слайда */
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .swiper-slide:nth-child(even) {
-            background: #555;
-        }
-
-        .content {
-            max-width: 600px;
-            margin: 0 auto;
-            color: #fff;
-        }
-
-        .content p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
+    <title>Главная страница</title>
 </head>
 <body>
-    <header class="fixed-header">
-        Fixed Header
-    </header>
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="content">
-                    <h1>йццйц 1</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-                    <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="content">
-                    <h1>Block 2</h1>
-                    <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.</p>
-                    <p>Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.</p>
-                    <p>Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="content">
-                    <h1>Block 3</h1>
-                    <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
-                    <p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="content">
-                    <h1>Block 4</h1>
-                    <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                    <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.</p>
-                </div>
-            </div>
+    <header class="header">
+        <div class="header__content">
+            <span class="logo">Quantum Dev // ваш успех в каждом коде!</span>
+            <a href="" class="contact">Связаться с нами</a>
         </div>
+    </header>
+
+    <div id="fullpage">
+        <div class="section" id="section1">This is Section 1</div>
+        <div class="section" id="section2">This is Section 2</div>
+        <div class="section" id="section3">Explore Section 3</div>
+        <div class="section" id="section4">End at Section 4</div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const swiper = new Swiper('.swiper', {
-                direction: 'vertical', // Вертикальная прокрутка
-                mousewheel: true, // Управление колесом мыши
-                speed: 800, // Скорость анимации
-                keyboard: {
-                    enabled: true, // Управление клавиатурой
-                    onlyInViewport: true,
-                },
-                touchReleaseOnEdges: false, // Отключить выход за края
-                nested: true, // Вложенный скролл
-                allowTouchMove: false, // Блокируем переключение свайпом
-                on: {
-                    slideChange: () => {
-                        const slides = document.querySelectorAll('.swiper-slide');
-                        slides.forEach((slide) => {
-                            slide.scrollTop = 0; // Сбрасываем прокрутку в начало
-                        });
-                    },
-                },
-            });
-
-            const slides = document.querySelectorAll('.swiper-slide');
-
-            slides.forEach((slide, index) => {
-                slide.addEventListener('scroll', () => {
-                    const scrollTop = slide.scrollTop;
-                    const scrollHeight = slide.scrollHeight;
-                    const clientHeight = slide.clientHeight;
-
-                    // Проверяем, достиг ли пользователь нижней части контента
-                    if (scrollTop + clientHeight >= scrollHeight) {
-                        swiper.allowTouchMove = true; // Разрешаем переключение свайпом
-                    } else {
-                        swiper.allowTouchMove = false; // Блокируем переключение свайпом
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="./js/fullPage.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,11 +1,13 @@
-function setSlideHeight() {
-    const slides = document.querySelectorAll('.slide');
-    const viewportHeight = window.innerHeight; // Текущая высота окна
-    slides.forEach(slide => {
-        slide.style.height = `${viewportHeight}px`;
+document.addEventListener('DOMContentLoaded', () => {
+    // Инициализация FullPage.js
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        scrollingSpeed: 1200,
+        navigation: true,
+        licenseKey: 'OPEN-SOURCE-GPLV3', // Убирает водяной знак
     });
-}
 
-// Вызываем при загрузке страницы и изменении размера окна
-window.addEventListener('resize', setSlideHeight);
-window.addEventListener('load', setSlideHeight);
+    // Удаление водяного знака (дополнительно, если всё ещё появляется)
+    const watermark = document.querySelector('.fp-watermark');
+    if (watermark) watermark.remove();
+});

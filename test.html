@@ -1,160 +1,108 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наша команда</title>
+    <title>FullPage.js Example with Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.21/fullpage.min.css">
     <style>
         /* Основные стили */
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
-            color: #333;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        /* Заголовки */
-        h1,
-        h2,
-        h3 {
-            color: #000;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        h2 {
-            margin-top: 2rem;
-        }
-
-        h3 {
-            color: #317773;
-            font-size: 1.5rem;
-        }
-
-        .intro {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Секция особенностей */
-        .features ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .features li {
+        /* Фиксированная шапка */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 1000; /* Шапка поверх всего */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        .features li::before {
-            content: "⦿";
-            color: #317773;
-            margin-right: 10px;
-            font-weight: bold;
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
         }
 
-        /* Команда */
-        .team {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
         }
 
-        .team-member {
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Секции */
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            color: white;
             text-align: center;
         }
 
-        .team-member img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+        .section:nth-child(1) { background-color: #3498db; }
+        .section:nth-child(2) { background-color: #e74c3c; }
+        .section:nth-child(3) { background-color: #2ecc71; }
+        .section:nth-child(4) { background-color: #9b59b6; }
 
-        .team-member h4 {
-            margin: 10px 0 5px;
-            font-size: 1.2rem;
-        }
-
-        .team-member p {
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .team-member a {
-            text-decoration: none;
-            color: #317773;
-            font-weight: bold;
-        }
-
-        .team-member a:hover {
-            text-decoration: underline;
+        /* Скрытие водяного знака */
+        .fp-watermark {
+            display: none !important;
         }
     </style>
 </head>
-
 <body>
-    <!-- Основной контейнер -->
-    <div class="container">
-        <!-- Заголовок -->
-        <h1>Наша команда</h1>
-        <p class="intro">
-            Мы — команда профессионалов, объединенных одной целью: превращать идеи в успешные проекты.
-            <br>
-            В Quantum Dev работают разработчики, дизайнеры и менеджеры, которые знают, как создать эффективные и
-            стильные решения для бизнеса и людей.
-        </p>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <h1>My Website</h1>
+        <nav>
+            <a href="#section1">Section 1</a>
+            <a href="#section2">Section 2</a>
+            <a href="#section3">Section 3</a>
+            <a href="#section4">Section 4</a>
+        </nav>
+    </header>
 
-        <!-- Секция сотрудников -->
-        <h2>Сотрудники</h2>
-        <div class="features">
-            <h3>Что нас отличает?</h3>
-            <ul>
-                <li><strong>Опыт и экспертиза</strong> – многолетний опыт в разработке проектов разного масштаба</li>
-                <li><strong>Любовь к инновациям</strong> – используем современные технологии и лучшие практики</li>
-                <li><strong>Индивидуальный подход</strong> – мы работаем с каждым клиентом как с партнером</li>
-            </ul>
-        </div>
-
-        <!-- Карточки сотрудников -->
-        <div class="team">
-            <div class="team-member">
-                <img src="photo1.jpg" alt="Федор Федотов">
-                <h4>Федор Федотов</h4>
-                <p>Руководитель</p>
-                <a href="#">Посмотреть ↗</a>
-            </div>
-            <div class="team-member">
-                <img src="photo1.jpg" alt="Федор Федотов">
-                <h4>Федор Федотов</h4>
-                <p>Руководитель</p>
-                <a href="#">Посмотреть ↗</a>
-            </div>
-            <div class="team-member">
-                <img src="photo2.jpg" alt="Алексей Спиридонов">
-                <h4>Алексей Спиридонов</h4>
-                <p>Руководитель</p>
-                <a href="#">Посмотреть ↗</a>
-            </div>
-            <div class="team-member">
-                <img src="photo2.jpg" alt="Алексей Спиридонов">
-                <h4>Алексей Спиридонов</h4>
-                <p>Руководитель</p>
-                <a href="#">Посмотреть ↗</a>
-            </div>
-        </div>
+    <!-- Контейнер для FullPage.js -->
+    <div id="fullpage">
+        <div class="section" id="section1">This is Section 1</div>
+        <div class="section" id="section2">This is Section 2</div>
+        <div class="section" id="section3">Explore Section 3</div>
+        <div class="section" id="section4">End at Section 4</div>
     </div>
-</body>
 
+    <!-- Подключение FullPage.js -->
+    <!-- <script src="./js/fullPage.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Инициализация FullPage.js
+            new fullpage('#fullpage', {
+                autoScrolling: true,
+                scrollingSpeed: 1200,
+                navigation: true,
+                licenseKey: 'OPEN-SOURCE-GPLV3', // Убирает водяной знак
+            });
+
+            // Удаление водяного знака (дополнительно, если всё ещё появляется)
+            const watermark = document.querySelector('.fp-watermark');
+            if (watermark) watermark.remove();
+        });
+    </script>
+</body>
 </html>

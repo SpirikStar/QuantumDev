@@ -82,6 +82,9 @@ body, html {
 .section.top .title {
   padding-top: 135px;
 }
+.section.bacground {
+  background-color: var(--white-color);
+}
 .section.banner {
   background: url("../img/banner.svg") no-repeat center center/cover;
 }
@@ -147,6 +150,18 @@ body, html {
 }
 .section__content .text {
   font-size: 22px;
+}
+.section__content.projects p.text {
+  font-size: 22px;
+  margin-top: 40px;
+}
+.section__content .check__projects {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  color: var(--base-color);
+  font-size: 22px;
+  font-weight: 500;
 }
 .section__content .flex {
   display: flex;
@@ -243,7 +258,10 @@ body, html {
   .section__content .subtitle {
     font-size: 22px;
   }
-  .section__content .text {
+  .section__content p.text {
+    font-size: 16px;
+  }
+  .section__content.projects p.text {
     font-size: 16px;
   }
   .section__content .subtitle__text {

@@ -66,6 +66,8 @@ body, html
         justify-content: flex-start
         & .title
             padding-top: 135px
+    &.bacground
+        background-color: var(--white-color)
     &.banner
         background: url("../img/banner.svg") no-repeat center center/cover
         & .title
@@ -119,6 +121,17 @@ body, html
                 color: var(--base-color)
         & .text
             font-size: 22px
+        &.projects p.text
+            font-size: 22px
+            margin-top: 40px
+        & .check__projects
+            display: flex
+            align-items: center
+            margin-top: 150px
+
+            color: var(--base-color)
+            font-size: 22px
+            font-weight: 500
         & .flex
             display: flex
             width: 100%
@@ -172,7 +185,7 @@ body, html
 @media (max-width: 750px)
     *
         transition: all 1s
-    
+
     .header
         &__content
             & .logo
@@ -199,7 +212,9 @@ body, html
                 font-size: 32px
             & .subtitle
                 font-size: 22px
-            & .text
+            & p.text
+                font-size: 16px
+            &.projects p.text
                 font-size: 16px
             & .subtitle__text
                 font-size: 14px

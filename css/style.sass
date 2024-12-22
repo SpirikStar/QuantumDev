@@ -64,7 +64,8 @@ body, html
         display: flex
         align-items: flex-start
         justify-content: flex-start
-        padding-top: 135px
+        & .title
+            padding-top: 135px
     &.banner
         background: url("../img/banner.svg") no-repeat center center/cover
         & .title
@@ -100,6 +101,31 @@ body, html
             &:hover
                 opacity: 0.8
                 transition: all 0.3s
+        & .title
+            font-size: 42px
+            font-weight: 600
+        & .subtitle
+            margin-top: 40px
+            font-size: 36px
+            font-weight: 600
+        & .text
+            font-size: 22px
+        & .flex
+            display: flex
+            width: 100%
+            &.left
+                justify-content: flex-start
+            &.right
+                justify-content: flex-end
+            &__position
+                display: flex
+                flex-direction: column
+                gap: 10px
+                width: 50%
+                & .line
+                    width: 100%
+                    & svg
+                        width: 90%
 @media (max-width: 750px)
     *
         transition: all 1s
@@ -123,5 +149,17 @@ body, html
             & .point
                 & .text
                     font-size: 14px
+        &__content
+            & .flex
+                width: 100%
+                &.left, .right
+                    width: 100%
+                    justify-content: flex-start
+                &__position
+                    width: 100%
+                    & .line
+                        width: 100%
+                        & svg
+                            width: 100%
 .fp-watermark
     display: none !important

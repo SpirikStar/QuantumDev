@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="./css/fullpage.min.css">
     <title>Главная страница</title>
 </head>
+<script>
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = './css/style.css?timestamp=' + new Date().getTime();
+    document.head.appendChild(link);
+</script>
 
 <body>
     <header class="header">

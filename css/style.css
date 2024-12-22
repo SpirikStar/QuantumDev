@@ -107,7 +107,7 @@ body, html {
   align-items: center;
   gap: 15px;
 }
-.section__content .points .point .text {
+.section__content .points .point span.text {
   font-size: 18px;
   font-weight: 600;
 }
@@ -125,6 +125,7 @@ body, html {
   transition: all 0.3s;
 }
 .section__content .title {
+  width: 100%;
   font-size: 42px;
   font-weight: 600;
 }
@@ -133,12 +134,58 @@ body, html {
   font-size: 36px;
   font-weight: 600;
 }
+.section__content .subtitle__text {
+  margin-top: 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
 .section__content .text {
   font-size: 22px;
 }
 .section__content .flex {
   display: flex;
   width: 100%;
+}
+.section__content .flex.team {
+  justify-content: space-between;
+  gap: 60px;
+}
+.section__content .flex.team p.text {
+  margin-top: 40px;
+}
+.section__content .flex .team__commands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.section__content .flex .team__commands .card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.section__content .flex .team__commands .card__img {
+  width: 100%;
+  height: 180px;
+  border-radius: 5px;
+}
+.section__content .flex .team__commands .card__name {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.section__content .flex .team__commands .card__position {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.section__content .flex .team__commands .card__link {
+  color: var(--base-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 20px;
 }
 .section__content .flex.left {
   justify-content: flex-start;
@@ -190,6 +237,9 @@ body, html {
   .section__content .text {
     font-size: 16px;
   }
+  .section__content .subtitle__text {
+    font-size: 14px;
+  }
   .section__content .flex {
     width: 100%;
   }
@@ -205,6 +255,14 @@ body, html {
   }
   .section__content .flex__position .line svg {
     width: 100%;
+  }
+  .section__content .flex.team {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .section__content .flex .team__commands {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 .fp-watermark {

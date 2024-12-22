@@ -82,6 +82,22 @@ body, html {
   margin: 0 auto;
   width: 95%;
 }
+.section__content .points {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.section__content .points .point {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.section__content .points .point .text {
+  font-size: 18px;
+  font-weight: 600;
+}
 
 @media (max-width: 750px) {
   * {

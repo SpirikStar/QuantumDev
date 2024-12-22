@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Slider with Swiper.js</title>
+    <title>Vertical Slider with Controlled Scroll</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <style>
         body,
@@ -90,13 +90,6 @@
                     <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                     <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                     <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -133,18 +126,36 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            direction: 'vertical', // Вертикальная прокрутка
-            mousewheel: true, // Управление колесом мыши
-            speed: 800, // Скорость анимации
-            keyboard: {
-                enabled: true, // Управление клавиатурой
-                onlyInViewport: true,
-            },
-            touchReleaseOnEdges: true, // Разрешить выход за границы
-            nested: true, // Включить поддержку вложенного скроллинга
-            freeMode: false, // Отключаем свободный режим
-            preventInteractionOnTransition: false, // Убираем ограничения на взаимодействие при переходе
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.swiper', {
+                direction: 'vertical', // Вертикальная прокрутка
+                mousewheel: true, // Управление колесом мыши
+                speed: 800, // Скорость анимации
+                keyboard: {
+                    enabled: true, // Управление клавиатурой
+                    onlyInViewport: true,
+                },
+                touchReleaseOnEdges: false, // Отключить выход за края
+                nested: true, // Вложенный скролл
+                allowTouchMove: false, // Блокируем переключение свайпом
+            });
+
+            const slides = document.querySelectorAll('.swiper-slide');
+
+            slides.forEach((slide, index) => {
+                slide.addEventListener('scroll', () => {
+                    const scrollTop = slide.scrollTop;
+                    const scrollHeight = slide.scrollHeight;
+                    const clientHeight = slide.clientHeight;
+
+                    // Проверяем, достиг ли пользователь нижней части контента
+                    if (scrollTop + clientHeight >= scrollHeight) {
+                        swiper.allowTouchMove = true; // Разрешаем переключение свайпом
+                    } else {
+                        swiper.allowTouchMove = false; // Блокируем переключение свайпом
+                    }
+                });
+            });
         });
     </script>
 </body>

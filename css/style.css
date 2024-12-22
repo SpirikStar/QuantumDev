@@ -70,6 +70,16 @@ body, html {
 .section {
   color: var(--text-color);
 }
+.section.center {
+  display: flex;
+  justify-content: center;
+}
+.section.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 135px;
+}
 .section.banner {
   background: url("../img/banner.svg") no-repeat center center/cover;
 }

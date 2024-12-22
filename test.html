@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullPage.js Example with Header</title>
+    <title>FullPage.js with Custom Alignment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.21/fullpage.min.css">
     <style>
         /* Основные стили */
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -26,7 +28,8 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
-            z-index: 1000; /* Шапка поверх всего */
+            z-index: 1000;
+            /* Шапка поверх всего */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
@@ -46,27 +49,60 @@
             text-decoration: underline;
         }
 
-        /* Секции */
+        /* Стили секций */
         .section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 32px;
+            font-size: 24px;
             color: white;
             text-align: center;
         }
 
-        .section:nth-child(1) { background-color: #3498db; }
-        .section:nth-child(2) { background-color: #e74c3c; }
-        .section:nth-child(3) { background-color: #2ecc71; }
-        .section:nth-child(4) { background-color: #9b59b6; }
+        /* Центрирование (по умолчанию) */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-        /* Скрытие водяного знака */
+        /* Выравнивание по верхнему левому углу */
+        .top-left {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        /* Выравнивание по нижнему правому углу */
+        .bottom-right {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        /* Разные цвета для секций */
+        .section:nth-child(1) {
+            background-color: #3498db;
+        }
+
+        .section:nth-child(2) {
+            background-color: #e74c3c;
+        }
+
+        .section:nth-child(3) {
+            background-color: #2ecc71;
+        }
+
+        .section:nth-child(4) {
+            background-color: #9b59b6;
+        }
+
+        /* Скрыть водяной знак */
         .fp-watermark {
             display: none !important;
         }
     </style>
 </head>
+
 <body>
     <!-- Шапка сайта -->
     <header class="header">
@@ -81,14 +117,14 @@
 
     <!-- Контейнер для FullPage.js -->
     <div id="fullpage">
-        <div class="section" id="section1">This is Section 1</div>
-        <div class="section" id="section2">This is Section 2</div>
-        <div class="section" id="section3">Explore Section 3</div>
-        <div class="section" id="section4">End at Section 4</div>
+        <div class="section center" id="section1">This is Section 1 (Center)</div>
+        <div class="section top-left" id="section2">This is Section 2 (Top Left)</div>
+        <div class="section bottom-right" id="section3">Explore Section 3 (Bottom Right)</div>
+        <div class="section center" id="section4">End at Section 4 (Center)</div>
     </div>
 
     <!-- Подключение FullPage.js -->
-    <!-- <script src="./js/fullPage.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.21/fullpage.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Инициализация FullPage.js
@@ -97,6 +133,7 @@
                 scrollingSpeed: 1200,
                 navigation: true,
                 licenseKey: 'OPEN-SOURCE-GPLV3', // Убирает водяной знак
+                anchors: ['section1', 'section2', 'section3', 'section4'], // Якоря
             });
 
             // Удаление водяного знака (дополнительно, если всё ещё появляется)
@@ -105,4 +142,5 @@
         });
     </script>
 </body>
+
 </html>

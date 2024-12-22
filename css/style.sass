@@ -57,6 +57,14 @@ body, html
 
 .section
     color: var(--text-color)
+    &.center
+        display: flex
+        justify-content: center
+    &.top
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        padding-top: 135px
     &.banner
         background: url("../img/banner.svg") no-repeat center center/cover
         & .title
@@ -86,12 +94,12 @@ body, html
             align-items: center
             color: var(--base-color)
             font-size: 22px
-            font-weight: 500    
+            font-weight: 500
 
             transition: all 0.3s
             &:hover
                 opacity: 0.8
-                transition: all 0.3s             
+                transition: all 0.3s
 @media (max-width: 750px)
     *
         transition: all 1s

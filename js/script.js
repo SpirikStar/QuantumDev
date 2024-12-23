@@ -15,4 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Удаление водяного знака (дополнительно, если всё ещё появляется)
     const watermark = document.querySelector('.fp-watermark');
     if (watermark) watermark.remove();
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        document.addEventListener('focusin', () => {
+            fullpage_api.setAutoScrolling(false);
+        });
+
+        document.addEventListener('focusout', () => {
+            fullpage_api.setAutoScrolling(true);
+        });
+    }
 });

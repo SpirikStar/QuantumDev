@@ -13,7 +13,9 @@ body, html
     padding: 0
     font-family: 'Gilroy', sans-serif
     background-color: var(--background-color)
-
+.fp-overflow
+    margin: 0 auto
+    width: 100%
 .header
     position: fixed
     width: 100%
@@ -181,7 +183,19 @@ body, html
                 & .line
                     width: 100%
                     & svg
-                        width: 90%
+                        width: 100%
+
+.contact__us
+    display: flex
+    justify-content: space-between
+    gap: 60px
+    margin-top: 40px
+    width: 100%
+    &__block 
+        width: 100%
+        & .form
+            display: flex
+            flex-direction: column
 @media (max-width: 750px)
     *
         transition: all 1s

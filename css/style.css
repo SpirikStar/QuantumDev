@@ -20,6 +20,11 @@ body, html {
   background-color: var(--background-color);
 }
 
+.fp-overflow {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -224,7 +229,22 @@ body, html {
   width: 100%;
 }
 .section__content .flex__position .line svg {
-  width: 90%;
+  width: 100%;
+}
+
+.contact__us {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 40px;
+  width: 100%;
+}
+.contact__us__block {
+  width: 100%;
+}
+.contact__us__block .form {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 750px) {

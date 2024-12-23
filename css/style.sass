@@ -170,6 +170,8 @@ body, html
                         font-size: 16px
 
                         margin-top: 20px
+                        &:hover .card__img
+                            transform: scale(1.1)
             &.left
                 justify-content: flex-start
             &.right
@@ -190,7 +192,7 @@ body, html
     gap: 60px
     margin-top: 40px
     width: 100%
-    &__block 
+    &__block
         width: 100%
         & .form
             display: flex
@@ -235,7 +237,7 @@ body, html
                 & p.text
                     opacity: 0.8
                     font-weight: 500
-                & a.title
+                &-title
                     width: auto
                     padding: 0
                     font-size: 36px
@@ -244,7 +246,15 @@ body, html
 @media (max-width: 750px)
     *
         transition: all 1s
-
+    .contact__us__block__infos
+        margin-top: 25px
+        gap: 15px
+        & .row
+            gap: 5px
+            &-title
+                font-size: 18px
+    .contact__us
+        gap: 25px
     .header
         &__content
             & .logo
@@ -298,5 +308,5 @@ body, html
                 & .team__commands
                     display: flex
                     flex-wrap: wrap
-// .fp-watermark
-//     display: none !important
+.fp-watermark
+    display: none !important

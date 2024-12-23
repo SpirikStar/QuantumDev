@@ -10,5 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Удаление водяного знака (дополнительно, если всё ещё появляется)
     const watermark = document.querySelector('.fp-watermark');
-    // if (watermark) watermark.remove();
+    if (watermark) watermark.remove();
 });

@@ -211,6 +211,9 @@ body, html {
   font-size: 16px;
   margin-top: 20px;
 }
+.section__content .flex .team__commands .card__link:hover .card__img {
+  transform: scale(1.1);
+}
 .section__content .flex.left {
   justify-content: flex-start;
 }
@@ -296,7 +299,7 @@ body, html {
   opacity: 0.8;
   font-weight: 500;
 }
-.contact__us__block__infos .row a.title {
+.contact__us__block__infos .row-title {
   width: auto;
   padding: 0;
   font-size: 36px;
@@ -307,6 +310,19 @@ body, html {
 @media (max-width: 750px) {
   * {
     transition: all 1s;
+  }
+  .contact__us__block__infos {
+    margin-top: 25px;
+    gap: 15px;
+  }
+  .contact__us__block__infos .row {
+    gap: 5px;
+  }
+  .contact__us__block__infos .row-title {
+    font-size: 18px;
+  }
+  .contact__us {
+    gap: 25px;
   }
   .header__content .logo {
     font-size: 16px;
@@ -375,4 +391,7 @@ body, html {
     display: flex;
     flex-wrap: wrap;
   }
+}
+.fp-watermark {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

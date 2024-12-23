@@ -66,13 +66,11 @@ body, html
         display: flex
         align-items: flex-start
         justify-content: flex-start
-        & .title
-            padding-top: 135px
     &.bacground
         background-color: var(--white-color)
     &.banner
         background: url("../img/banner.svg") no-repeat center center/cover
-        & .title
+        & .banner-title
             font-size: 72px
             font-weight: 700
             margin-bottom: 20px
@@ -106,6 +104,7 @@ body, html
                 opacity: 0.8
                 transition: all 0.3s
         & .title
+            margin-top: 135px
             width: 100%
             font-size: 42px
             font-weight: 600
@@ -122,7 +121,7 @@ body, html
             &.base-color
                 color: var(--base-color)
         & .text
-            font-size: 22px
+            font-size: 18px
         &.projects p.text
             font-size: 22px
             margin-top: 40px
@@ -260,7 +259,7 @@ body, html
         flex-wrap: wrap
     .section
         &.banner
-            & .title
+            & .banner-title
                 font-size: 42px
                 width: 100%
         & .points
@@ -270,6 +269,7 @@ body, html
                     font-size: 12px
         &__content
             & .title
+                margin-top: 70px
                 font-size: 32px
             & .subtitle
                 font-size: 22px
@@ -298,5 +298,5 @@ body, html
                 & .team__commands
                     display: flex
                     flex-wrap: wrap
-.fp-watermark
-    display: none !important
+// .fp-watermark
+//     display: none !important

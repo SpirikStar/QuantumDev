@@ -84,16 +84,13 @@ body, html {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.section.top .title {
-  padding-top: 135px;
-}
 .section.bacground {
   background-color: var(--white-color);
 }
 .section.banner {
   background: url("../img/banner.svg") no-repeat center center/cover;
 }
-.section.banner .title {
+.section.banner .banner-title {
   font-size: 72px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -133,6 +130,7 @@ body, html {
   transition: all 0.3s;
 }
 .section__content .title {
+  margin-top: 135px;
   width: 100%;
   font-size: 42px;
   font-weight: 600;
@@ -154,7 +152,7 @@ body, html {
   color: var(--base-color);
 }
 .section__content .text {
-  font-size: 22px;
+  font-size: 18px;
 }
 .section__content.projects p.text {
   font-size: 22px;
@@ -324,7 +322,7 @@ body, html {
   .contact__us {
     flex-wrap: wrap;
   }
-  .section.banner .title {
+  .section.banner .banner-title {
     font-size: 42px;
     width: 100%;
   }
@@ -335,6 +333,7 @@ body, html {
     font-size: 12px;
   }
   .section__content .title {
+    margin-top: 70px;
     font-size: 32px;
   }
   .section__content .subtitle {
@@ -376,7 +375,4 @@ body, html {
     display: flex;
     flex-wrap: wrap;
   }
-}
-.fp-watermark {
-  display: none !important;
 }/*# sourceMappingURL=style.css.map */

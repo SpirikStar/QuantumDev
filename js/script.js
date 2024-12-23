@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         scrollingSpeed: 1200,
         navigation: true,
+        // Разрешаем прокрутку внутри элементов input, textarea
+        normalScrollElements: '.form__input, textarea',
+        // Убираем автофокусировку
+        fitToSection: true,
     });
 
     // Удаление водяного знака (дополнительно, если всё ещё появляется)

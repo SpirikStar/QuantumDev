@@ -245,6 +245,65 @@ body, html {
 .contact__us__block .form {
   display: flex;
   flex-direction: column;
+  gap: 25px;
+}
+.contact__us__block .form textarea {
+  height: 120px;
+  resize: none;
+}
+.contact__us__block .form input, .contact__us__block .form textarea {
+  background-color: rgba(49, 119, 116, 0.05);
+  border: none;
+  padding: 24px;
+  border-radius: 5px;
+  outline: none;
+}
+.contact__us__block .form input::-moz-placeholder, .contact__us__block .form textarea::-moz-placeholder {
+  color: var(--text-color);
+  font-family: "Gilroy", sans-serif;
+  opacity: 0.5;
+}
+.contact__us__block .form input::placeholder, .contact__us__block .form textarea::placeholder {
+  color: var(--text-color);
+  font-family: "Gilroy", sans-serif;
+  opacity: 0.5;
+}
+.contact__us__block .form button {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contact__us__block .form button:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.contact__us__block__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+}
+.contact__us__block__infos .row {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact__us__block__infos .row p.text {
+  opacity: 0.8;
+  font-weight: 500;
+}
+.contact__us__block__infos .row a.title {
+  width: auto;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--base-color);
 }
 
 @media (max-width: 750px) {
@@ -261,6 +320,9 @@ body, html {
     width: 150px;
     height: 42px;
     font-size: 14px;
+  }
+  .contact__us {
+    flex-wrap: wrap;
   }
   .section.banner .title {
     font-size: 42px;

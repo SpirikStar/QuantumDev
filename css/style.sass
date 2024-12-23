@@ -196,6 +196,52 @@ body, html
         & .form
             display: flex
             flex-direction: column
+            gap: 25px
+            & textarea
+                height: 120px
+                resize: none
+            & input, textarea
+                background-color: rgba(49, 119, 116, 0.05)
+                border: none
+                padding: 24px
+                border-radius: 5px
+                outline: none
+                &::placeholder
+                    color: var(--text-color)
+                    font-family: 'Gilroy', sans-serif
+                    opacity: 0.5
+            & button
+                background-color: var(--base-color)
+                color: var(--white-color)
+                font-size: 18px
+                font-weight: 500
+                border: none
+                padding: 15px
+                border-radius: 5px
+                cursor: pointer
+                transition: all 0.3s
+                &:hover
+                    opacity: 0.8
+                    transition: all 0.3s
+
+        &__infos
+            display: flex
+            flex-direction: column
+            gap: 40px
+            margin-top: 60px
+            & .row
+                display: flex
+                flex-direction: column
+                gap: 25px
+                & p.text
+                    opacity: 0.8
+                    font-weight: 500
+                & a.title
+                    width: auto
+                    padding: 0
+                    font-size: 36px
+                    font-weight: 600
+                    color: var(--base-color)
 @media (max-width: 750px)
     *
         transition: all 1s
@@ -210,7 +256,8 @@ body, html
                 width: 150px
                 height: 42px
                 font-size: 14px
-
+    .contact__us
+        flex-wrap: wrap
     .section
         &.banner
             & .title

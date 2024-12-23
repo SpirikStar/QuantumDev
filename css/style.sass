@@ -213,7 +213,7 @@ body
                 height: 120px
                 resize: none
             & input, textarea
-                background-color: rgba(49, 119, 116, 0.05)
+                background-color: #f5f7fa
                 border: none
                 padding: 24px
                 border-radius: 5px
@@ -278,6 +278,11 @@ body
                 font-size: 14px
     .contact__us
         flex-wrap: wrap
+        &__block .form
+            gap: 15px
+            & input, textarea
+                padding: 15px
+                border-radius: 2px
     .section
         &.banner
             & .banner-title
@@ -287,10 +292,9 @@ body
             gap: 10px
             & .point
                 & span.text
-                    font-size: 12px
+                    font-size: 14px
         &__content
             & .title
-                margin-top: 70px
                 font-size: 32px
             & .subtitle
                 font-size: 22px
@@ -299,7 +303,8 @@ body
             &.projects p.text
                 font-size: 16px
             & .subtitle__text
-                font-size: 14px
+                margin-top: 15px
+                font-size: 16px
             & .check__projects
                 margin-top: 40px
             & .flex
@@ -316,6 +321,14 @@ body
                 &.team
                     flex-direction: column
                     gap: 40px
+                    & p.text
+                        margin-top: 25px
                 & .team__commands
                     display: flex
-                    flex-wrap: wrap
+                    flex-wrap:  wrap
+                    & .card
+                        width: 100%
+                        &__img
+                            width: 100%
+                            height: 180px
+                            object-fit: cover

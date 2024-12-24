@@ -435,4 +435,16 @@ body, html {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .projects__content {
+    flex-direction: column;
+  }
+  .projects__content-line {
+    display: none;
+  }
+  .projects__content__block-title {
+    font-size: 16px;
+  }
+  .projects__content__block-text {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

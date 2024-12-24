@@ -137,14 +137,6 @@ body, html
         &.projects p.text
             font-size: 22px
             margin-top: 40px
-        & .check__projects
-            display: flex
-            align-items: center
-            margin-top: 150px
-
-            color: var(--base-color)
-            font-size: 22px
-            font-weight: 500
         & .flex
             display: flex
             width: 100%
@@ -194,6 +186,34 @@ body, html
                 gap: 10px
                 width: 50%
 
+.projects
+    &__content
+        margin-top: 40px
+        display: flex
+        gap: 25px
+        &-line
+            border: none
+            width: 4px
+            height: auto
+            background-color: var(--base-color)
+            border-radius: 60px
+            margin: 0 auto
+        &__block
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 15px
+            &-title
+                display: flex
+                align-items: center
+                gap: 7px
+                font-size: 22px
+                color: var(--base-color)
+                font-weight: 600
+            &-text
+                font-size: 18px
+                color: var(--text-color)
+                font-weight: 500
 .contact__us
     display: flex
     justify-content: space-between
@@ -302,8 +322,6 @@ body, html
             & .subtitle__text
                 margin-top: 15px
                 font-size: 16px
-            & .check__projects
-                margin-top: 40px
             & .flex
                 width: 100%
                 &.left, .right
@@ -322,7 +340,7 @@ body, html
                         margin-top: 25px
                 & .team__commands
                     display: flex
-                    flex-wrap:  wrap
+                    flex-wrap: wrap
                     & .card
                         width: 100%
                         &__img

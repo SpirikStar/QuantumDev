@@ -260,6 +260,82 @@ body, html {
   color: var(--text-color);
   font-weight: 500;
 }
+.projects__works {
+  margin-top: 60px;
+}
+.projects__works__filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.projects__works__filter-btn {
+  border: 1px solid #232323;
+  border-radius: 60px;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-color);
+  background: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.projects__works__filter-btn.active {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  border: 1px solid var(--base-color);
+}
+.projects__works__filter-btn:hover {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  transition: background-color 0.3s, color 0.3s;
+  border-color: var(--base-color);
+}
+.projects__works__cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(362px, 1fr));
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  color: var(--text-color);
+}
+.projects__works__cards.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects__works__cards .card {
+  height: 300px;
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.projects__works__cards .card img {
+  width: 100%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+.projects__works__cards .card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.projects__works__cards .card-link {
+  position: absolute;
+  bottom: 20px;
+  color: var(--base-color);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.projects__works__cards .card-link:hover {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
 
 .contact__us {
   display: flex;
@@ -446,5 +522,12 @@ body, html {
   }
   .projects__content__block-text {
     font-size: 14px;
+  }
+  .projects__works__filter {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .projects__works__filter-btn {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

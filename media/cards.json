@@ -1,0 +1,48 @@
+{
+    "categories": {
+        "Многостроничный сайт": [
+            {
+                "image": "./media/projects/forcex.png",
+                "title": "Магазин ForceX",
+                "link": "#"
+            },
+            {
+                "image": "./media/projects/torg.png",
+                "title": "Торговая площадка недвижимости",
+                "link": "#"
+            },
+            {
+                "image": "./media/projects/torg.png",
+                "title": "Торговая площадка недвижимости",
+                "link": "#"
+            },
+            {
+                "image": "./media/projects/torg.png",
+                "title": "Торговая площадка недвижимости",
+                "link": "#"
+            }
+        ],
+        "Лендинг": [
+            {
+                "image": "./media/projects/torg.png",
+                "title": "Торговая площадка недвижимости",
+                "link": "#"
+            },
+            {
+                "image": "./media/projects/torg.png",
+                "title": "Торговая площадка недвижимости",
+                "link": "#"
+            }
+        ],
+        "Посты": [
+            {
+                "image": "./media/projects/torg.png",
+                "title": "Торговая площадка недвижимости",
+                "link": "#"
+            }
+        ],
+        "Дизайн": [
+
+        ]
+    }
+}

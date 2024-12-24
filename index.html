@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./fonts/stylesheet.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./static/fonts/stylesheet.css">
+    <link rel="stylesheet" href="./static/css/style.css">
     <title>Главная страница</title>
 </head>
 <script>
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = './css/style.css?timestamp=' + new Date().getTime();
+    link.href = './static/css/style.css?timestamp=' + new Date().getTime();
     document.head.appendChild(link);
 </script>
 
@@ -75,7 +75,7 @@
             <div class="flex left">
                 <div class="flex__position">
                     <h2 class="subtitle base-color">Quantum Dev</h2>
-                    <svg width="100%" height="auto" viewBox="0 0 751 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="100%" viewBox="0 0 751 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM750.707 8.70711C751.098 8.31658 751.098 7.68342 750.707 7.29289L744.343 0.928932C743.953 0.538408 743.319 0.538408 742.929 0.928932C742.538 1.31946 742.538 1.95262 742.929 2.34315L748.586 8L742.929 13.6569C742.538 14.0474 742.538 14.6805 742.929 15.0711C743.319 15.4616 743.953 15.4616 744.343 15.0711L750.707 8.70711ZM1 9L750 9V7L1 7V9Z"
                             fill="#317773" />
@@ -93,7 +93,7 @@
             <div class="flex right">
                 <div class="flex__position">
                     <h2 class="subtitle base-color">Ваша идея - наша реализация</h2>
-                    <svg width="100%" height="auto" viewBox="0 0 751 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="100%" viewBox="0 0 751 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM750 9C750.552 9 751 8.55228 751 8C751 7.44772 750.552 7 750 7V9ZM1 9L750 9V7L1 7V9Z"
                             fill="#317773" />
@@ -229,7 +229,7 @@
                 </div>
                 <div class="team__commands">
                     <div class="card">
-                        <img src="./img/fedor.svg" class="card__img">
+                        <img src="./static/img/fedor.svg" class="card__img">
                         <span class="card__name">Федор Федотов</span>
                         <span class="card__position">Руководитель проектов | UI/UX | Разработчик С++, C#, NET</span>
                         <a href="./media/spiridonov.pdf" class="card__link">
@@ -243,7 +243,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <img src="./img/spiridonov.svg" class="card__img">
+                        <img src="./static/img/spiridonov.svg" class="card__img">
                         <span class="card__name">Алексей Спиридонов</span>
                         <span class="card__position">Руководитель проектов | Архитектор | Разработчик Python, Django
                         </span>
@@ -334,7 +334,7 @@
             </div>
         </div>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./static/js/script.js"></script>
 </body>
 
 </html>

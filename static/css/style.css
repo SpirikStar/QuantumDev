@@ -293,7 +293,7 @@ body, html {
 .projects__works__cards {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(362px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   opacity: 0;
   transform: translateY(20px);
@@ -529,5 +529,20 @@ body, html {
   }
   .projects__works__filter-btn {
     width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .projects__works__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .projects__works__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .projects__works__cards {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -29,7 +29,7 @@ function loadCards(category) {
                 cardElement.innerHTML = `
                     <img src="${card.image}" alt="${card.title}">
                     <h3 class="card-title">${card.title}</h3>
-                    <a class="card-link" href="${card.link}">Посмотреть &rarr;</a>
+                    <a class="card-link" href="/gallery/?gallery=${card.link}">Посмотреть &rarr;</a>
                 `;
                 container.appendChild(cardElement);
             });

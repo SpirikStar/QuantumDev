@@ -63,7 +63,7 @@ body, html {
   font-weight: 600;
 }
 .header__content .logo::before {
-  content: "Quantum Dev // ваш успех в каждом коде!";
+  content: "Quantum Labs // ваш успех в каждом коде!";
   margin-right: 10px;
   color: var(--text-color);
 }
@@ -432,7 +432,7 @@ body, html {
     font-size: 16px;
   }
   .header__content .logo::before {
-    content: "Quantum Dev";
+    content: "Quantum Labs";
   }
   .header__content .contact {
     width: 150px;

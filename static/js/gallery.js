@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Fetch JSON data
-    fetch("../media/cards.json")
+    fetch("/media/cards.json")
         .then(response => response.json())
         .then(data => {
             const galleryId = new URLSearchParams(window.location.search).get("gallery");

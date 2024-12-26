@@ -1,0 +1,440 @@
+:root
+    --base-color: #317773
+    --background-color: #F5F7FA
+    --text-color: #232323
+    --white-color: #fff
+*
+    margin: 0
+    padding: 0
+    text-decoration: none
+    transition: all 1s
+
+body, html
+    margin: 0
+    padding: 0
+    font-family: 'Gilroy', sans-serif
+    background-color: var(--background-color)
+
+/* Стили для скроллбара */
+::-webkit-scrollbar
+    width: 12px
+    height: 12px
+
+::-webkit-scrollbar-thumb
+    background-color: #317773
+    border-radius: 6px
+    border: 3px solid #ffffff
+    opacity: 1
+    transition: opacity 0.3s ease
+
+::-webkit-scrollbar-track
+    background-color: #f5f5f5
+    border-radius: 6px
+
+.header
+    position: fixed
+    width: 100%
+    height: 75px
+    z-index: 1000
+    top: 0
+    backdrop-filter: blur(10px)
+    background-color: rgba(255, 255, 255, 0.6)
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        width: 95%
+        height: 100%
+        & .logo
+            font-size: 18px
+            font-weight: 600
+            &::before
+                content: 'Quantum Dev // ваш успех в каждом коде!'
+                margin-right: 10px
+                color: var(--text-color)
+        & .contact
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 178px
+            height: 52px
+            border: 2px solid var(--base-color)
+            border-radius: 5px
+            color: var(--base-color)
+            text-decoration: none
+            font-weight: 600
+            font-size: 16px
+            transition: all 0.3s
+            &:hover
+                background-color: var(--base-color)
+                color: var(--white-color)
+                transition: all 0.3s
+
+.section
+    color: var(--text-color)
+    &.bacground
+        background-color: var(--white-color)
+    &.banner
+        background: url("../img/banner.svg") no-repeat center center/cover
+        height: 100vh
+        display: flex
+        align-items: center
+        & .banner-title
+            font-size: 72px
+            font-weight: 700
+            margin-bottom: 20px
+            max-width: 750px
+    &__content
+        padding: 60px 0
+        margin: 0 auto
+        width: 95%
+        & .points
+            margin-top: 40px
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: 25px
+            & .point
+                display: flex
+                align-items: center
+                gap: 15px
+                & span.text
+                    font-size: 18px
+                    font-weight: 500
+        & .btn
+            margin-top: 60px
+            display: flex
+            align-items: center
+            color: var(--base-color)
+            font-size: 22px
+            font-weight: 500
+
+            transition: all 0.3s
+            &:hover
+                opacity: 0.8
+                transition: all 0.3s
+        & .title
+            width: 100%
+            font-size: 42px
+            font-weight: 600
+        & .subtitle
+            margin-top: 40px
+            font-size: 36px
+            font-weight: 600
+            &.base-color
+                color: var(--base-color)
+        & .subtitle__text
+            margin-top: 40px
+            font-size: 26px
+            font-weight: 500
+            &.base-color
+                color: var(--base-color)
+        & .text
+            font-size: 18px
+        &.projects p.text
+            font-size: 22px
+            margin-top: 40px
+        & .flex
+            display: flex
+            width: 100%
+            &.team
+                justify-content: space-between
+                gap: 60px
+                & p.text
+                    margin-top: 40px
+            & .team__commands
+                display: grid
+                grid-template-columns: 1fr 1fr
+                gap: 25px
+                & .card
+                    width: 200px
+                    display: flex
+                    flex-direction: column
+                    &__img
+                        width: 100%
+                        height: 180px
+                        border-radius: 5px
+                    &__name
+                        margin-top: 15px
+                        font-size: 16px
+                        font-weight: 500
+                    &__position
+                        margin-top: 5px
+                        font-size: 14px
+                        font-weight: 300
+                        opacity: 0.8
+                    &__link
+                        color: var(--base-color)
+                        font-weight: 500
+                        display: flex
+                        align-items: center
+                        font-size: 16px
+
+                        margin-top: 20px
+                        &:hover .card__img
+                            transform: scale(1.1)
+            &.left
+                justify-content: flex-start
+            &.right
+                justify-content: flex-end
+            &__position
+                display: flex
+                flex-direction: column
+                gap: 10px
+                width: 50%
+
+.projects
+    &__content
+        margin-top: 40px
+        display: flex
+        gap: 25px
+        &-line
+            border: none
+            width: 4px
+            height: auto
+            background-color: var(--base-color)
+            border-radius: 60px
+            margin: 0 auto
+        &__block
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 15px
+            &-title
+                display: flex
+                align-items: center
+                gap: 7px
+                font-size: 22px
+                color: var(--base-color)
+                font-weight: 600
+            &-text
+                font-size: 18px
+                color: var(--text-color)
+                font-weight: 500
+    &__works
+        margin-top: 60px
+        &__filter
+            display: flex
+            align-items: center
+            gap: 15px
+            &-btn
+                border: 1px solid #232323
+                border-radius: 60px
+                padding: 10px 25px
+                font-size: 18px
+                font-weight: 500
+                cursor: pointer
+                color: var(--text-color)
+                background: none
+                transition: background-color 0.3s, color 0.3s
+                &.active
+                    background-color: var(--base-color)
+                    color: var(--white-color)
+                    border: 1px solid var(--base-color)
+
+                &:hover
+                    background-color: var(--base-color)
+                    color: var(--white-color)
+                    transition: background-color 0.3s, color 0.3s
+                    border-color: var(--base-color)
+        &__cards
+            margin-top: 40px
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            gap: 20px
+            opacity: 0
+            transform: translateY(20px)
+            transition: opacity 0.5s, transform 0.5s
+            color: var(--text-color)
+            &.visible
+                opacity: 1
+                transform: translateY(0)
+            & .card
+                height: 300px
+                background-color: var(--white-color)
+                padding: 20px
+                border-radius: 6px
+                transition: transform 0.3s, box-shadow 0.3s
+                position: relative
+                & img
+                    width: 100%
+                    height: 170px
+                    object-fit: cover
+                    border-radius: 6px
+                &-title
+                    font-size: 18px
+                    font-weight: 500
+                    margin-top: 15px
+                &-link
+                    position: absolute
+                    bottom: 20px
+                    color: var(--base-color)
+                    font-size: 16px
+                    font-weight: 500
+                    transition: color 0.3s
+                    &:hover
+                        color: var(--text-color)
+                        transition: color 0.3s
+
+.contact__us
+    display: flex
+    justify-content: space-between
+    gap: 60px
+    margin-top: 40px
+    width: 100%
+    &__block
+        width: 100%
+        & .form
+            display: flex
+            flex-direction: column
+            gap: 25px
+            & textarea
+                height: 120px
+                resize: none
+            & input, textarea
+                background-color: #f5f7fa
+                border: none
+                padding: 24px
+                border-radius: 5px
+                outline: none
+                &::placeholder
+                    color: var(--text-color)
+                    font-family: 'Gilroy', sans-serif
+                    opacity: 0.5
+            & button
+                background-color: var(--base-color)
+                color: var(--white-color)
+                font-size: 18px
+                font-weight: 500
+                border: none
+                padding: 15px
+                border-radius: 5px
+                cursor: pointer
+                transition: all 0.3s
+                &:hover
+                    opacity: 0.8
+                    transition: all 0.3s
+
+        &__infos
+            display: flex
+            flex-direction: column
+            gap: 40px
+            margin-top: 60px
+            & .row
+                display: flex
+                flex-direction: column
+                gap: 25px
+                & p.text
+                    opacity: 0.8
+                    font-weight: 500
+                &-title
+                    width: auto
+                    padding: 0
+                    font-size: 36px
+                    font-weight: 600
+                    color: var(--base-color)
+@media (max-width: 750px)
+    *
+        transition: all 1s
+    .contact__us__block__infos
+        margin-top: 25px
+        gap: 15px
+        & .row
+            gap: 5px
+            &-title
+                font-size: 18px
+    .contact__us
+        gap: 25px
+    .header
+        &__content
+            & .logo
+                font-size: 16px
+                &::before
+                    content: 'Quantum Dev'
+            & .contact
+                width: 150px
+                height: 42px
+                font-size: 14px
+    .contact__us
+        flex-wrap: wrap
+        &__block .form
+            gap: 15px
+            & input, textarea
+                padding: 15px
+                border-radius: 2px
+    .section
+        &.banner
+            & .banner-title
+                font-size: 42px
+                width: 100%
+        & .points
+            gap: 10px
+            & .point
+                & span.text
+                    font-size: 14px
+        &__content
+            & .title
+                font-size: 32px
+            & .subtitle
+                font-size: 22px
+            & p.text
+                font-size: 16px
+            &.projects p.text
+                font-size: 16px
+            & .subtitle__text
+                margin-top: 15px
+                font-size: 16px
+            & .flex
+                width: 100%
+                &.left, .right
+                    width: 100%
+                    justify-content: flex-start
+                &__position
+                    width: 100%
+                    & .line
+                        width: 100%
+                        & svg
+                            width: 100%
+                &.team
+                    flex-direction: column
+                    gap: 40px
+                    & p.text
+                        margin-top: 25px
+                & .team__commands
+                    display: flex
+                    flex-wrap: wrap
+                    & .card
+                        width: 100%
+                        &__img
+                            width: 100%
+                            height: 180px
+                            object-fit: cover
+    .projects
+        &__content
+            flex-direction: column
+            &-line
+                display: none
+            &__block
+                &-title
+                    font-size: 16px
+                &-text
+                    font-size: 14px
+        &__works
+            &__filter
+                flex-direction: column
+                gap: 20px
+                &-btn
+                    width: 100%
+
+@media (max-width: 1024px)
+    .projects__works__cards
+        grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 768px)
+    .projects__works__cards
+        grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 480px)
+    .projects__works__cards
+        grid-template-columns: 1fr

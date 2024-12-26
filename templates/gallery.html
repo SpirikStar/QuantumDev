@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея макетов</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/static/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/static/css/gallery.css?v=1">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__content">
+            <div class="container__content__info">
+                <button class="home-button" onclick="window.location.href='/';">← Вернуться на главную</button>
+                <h1>Галерея работ</h1>
+                <p>
+                    Выберите изображение для просмотра в большом формате. Используйте слайдер для переключения между
+                    изображениями.
+                </p>
+            </div>
+            <div class="gallery"></div>
+        </div>
+    </div>
+
+    <div class="slider-container hidden">
+        <button class="back-button absolute">← Другие примеры</button>
+        <div class="swiper">
+            <div class="swiper-wrapper"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="fullscreen-overlay">
+        <span class="close-button">&times;</span>
+        <img src="" alt="Fullscreen Image">
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/static/js/gallery.js?v=1"></script>
+</body>
+
+</html>

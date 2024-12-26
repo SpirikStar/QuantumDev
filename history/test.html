@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея с адаптивностью</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Левая панель с миниатюрами */
+        .thumbnail-panel {
+            width: 20%;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            position: fixed;
+            height: 100%;
+            z-index: 1000;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail-panel.hidden {
+            transform: translateX(-100%);
+        }
+
+        .thumbnail-panel img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: border-color 0.2s;
+        }
+
+        .thumbnail-panel img:hover {
+            border-color: #006c7a;
+        }
+
+        /* Правая панель с полноэкранным изображением */
+        .preview-panel {
+            flex-grow: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin-left: 20%;
+            transition: margin-left 0.3s ease;
+            overflow-y: auto;
+            height: 100vh;
+        }
+
+        .preview-panel.full-width {
+            margin-left: 0;
+        }
+
+        .preview-panel img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .preview-panel img.loaded {
+            opacity: 1;
+        }
+
+        /* Полноэкранный режим для мобильных */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .fullscreen img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 0;
+        }
+
+        .fullscreen-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        /* Кнопка "Другие примеры" */
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #006c7a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1100;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            display: none;
+        }
+
+        .toggle-button.visible {
+            display: block;
+        }
+
+        .toggle-button:hover {
+            opacity: 1;
+        }
+
+        /* Индикатор загрузки */
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #006c7a;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        .loader.visible {
+            display: block;
+        }
+
+        @keyframes spin {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .thumbnail-panel {
+                width: 100%;
+                height: 100%; /* Панель занимает всю высоту */
+                position: fixed; /* Фиксированное положение */
+                overflow-y: auto; /* Прокрутка */
+                z-index: 1500;
+            }
+
+            .toggle-button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thumbnail-panel img {
+                height: 80px;
+            }
+
+            .toggle-button {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Кнопка "Другие примеры" -->
+    <button class="toggle-button" id="toggle-button" onclick="toggleThumbnails()">Другие примеры</button>
+
+    <!-- Панель с миниатюрами -->
+    <div class="thumbnail-panel" id="thumbnail-panel">
+        <img src="./media/site/1/1.svg" alt="Пример работы 1">
+        <img src="./media/site/1/2.svg" alt="Пример работы 2">
+        <img src="./media/site/1/3.svg" alt="Пример работы 3">
+    </div>
+
+    <!-- Панель с полноэкранным просмотром -->
+    <div class="preview-panel" id="preview-panel">
+        <div class="loader" id="loader"></div>
+        <img src="./media/site/1/3.svg" alt="Просмотр работы" id="preview-image">
+    </div>
+
+    <!-- Полноэкранное окно -->
+    <div class="fullscreen" id="fullscreen" style="display: none;">
+        <button class="fullscreen-close" onclick="closeFullscreen()">×</button>
+        <img src="" alt="Полноэкранное изображение" id="fullscreen-image">
+    </div>
+
+    <script>
+        const thumbnailPanel = document.getElementById('thumbnail-panel');
+        const previewPanel = document.getElementById('preview-panel');
+        const previewImage = document.getElementById('preview-image');
+        const fullscreen = document.getElementById('fullscreen');
+        const fullscreenImage = document.getElementById('fullscreen-image');
+        const toggleButton = document.getElementById('toggle-button');
+        const loader = document.getElementById('loader');
+
+        // Функция загрузки изображения
+        thumbnailPanel.addEventListener('click', (event) => {
+            if (event.target.tagName === 'IMG') {
+                const fullImageSrc = event.target.src.replace('-thumb', ''); // Убираем "-thumb"
+                thumbnailPanel.classList.add('hidden');
+                previewPanel.classList.add('full-width');
+                toggleButton.classList.add('visible');
+
+                loader.classList.add('visible');
+                previewImage.classList.remove('loaded');
+
+                const img = new Image();
+                img.src = fullImageSrc;
+                img.onload = () => {
+                    previewImage.src = fullImageSrc;
+                    loader.classList.remove('visible');
+                    previewImage.classList.add('loaded');
+                };
+            }
+        });
+
+        // Полноэкранный режим
+        previewPanel.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                fullscreenImage.src = previewImage.src;
+                fullscreen.style.display = 'flex';
+            }
+        });
+
+        // Закрытие полноэкранного режима
+        function closeFullscreen() {
+            fullscreen.style.display = 'none';
+        }
+
+        // Функция для показа панели миниатюр
+        function toggleThumbnails() {
+            thumbnailPanel.classList.remove('hidden');
+            previewPanel.classList.remove('full-width');
+            toggleButton.classList.remove('visible');
+        }
+    </script>
+</body>
+</html>

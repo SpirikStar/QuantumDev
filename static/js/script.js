@@ -2,7 +2,7 @@ let data;
 
 // Загрузка JSON
 async function loadJSON() {
-    const response = await fetch('./media/cards.json'); // Укажите путь к файлу JSON
+    const response = await fetch('/media/cards.json'); // Укажите путь к файлу JSON
     data = await response.json();
     loadCards('Многостроничный сайт'); // Категория по умолчанию
 }

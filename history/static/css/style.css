@@ -1,0 +1,548 @@
+@charset "UTF-8";
+:root {
+  --base-color: #317773;
+  --background-color: #F5F7FA;
+  --text-color: #232323;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy", sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #317773;
+  border-radius: 6px;
+  border: 3px solid #ffffff;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 1000;
+  top: 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 95%;
+  height: 100%;
+}
+.header__content .logo {
+  font-size: 18px;
+  font-weight: 600;
+}
+.header__content .logo::before {
+  content: "Quantum Dev // ваш успех в каждом коде!";
+  margin-right: 10px;
+  color: var(--text-color);
+}
+.header__content .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 178px;
+  height: 52px;
+  border: 2px solid var(--base-color);
+  border-radius: 5px;
+  color: var(--base-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.header__content .contact:hover {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  transition: all 0.3s;
+}
+
+.section {
+  color: var(--text-color);
+}
+.section.bacground {
+  background-color: var(--white-color);
+}
+.section.banner {
+  background: url("../img/banner.svg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.section.banner .banner-title {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  max-width: 750px;
+}
+.section__content {
+  padding: 60px 0;
+  margin: 0 auto;
+  width: 95%;
+}
+.section__content .points {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.section__content .points .point {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.section__content .points .point span.text {
+  font-size: 18px;
+  font-weight: 500;
+}
+.section__content .btn {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  color: var(--base-color);
+  font-size: 22px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.section__content .btn:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.section__content .title {
+  width: 100%;
+  font-size: 42px;
+  font-weight: 600;
+}
+.section__content .subtitle {
+  margin-top: 40px;
+  font-size: 36px;
+  font-weight: 600;
+}
+.section__content .subtitle.base-color {
+  color: var(--base-color);
+}
+.section__content .subtitle__text {
+  margin-top: 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+.section__content .subtitle__text.base-color {
+  color: var(--base-color);
+}
+.section__content .text {
+  font-size: 18px;
+}
+.section__content.projects p.text {
+  font-size: 22px;
+  margin-top: 40px;
+}
+.section__content .flex {
+  display: flex;
+  width: 100%;
+}
+.section__content .flex.team {
+  justify-content: space-between;
+  gap: 60px;
+}
+.section__content .flex.team p.text {
+  margin-top: 40px;
+}
+.section__content .flex .team__commands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.section__content .flex .team__commands .card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.section__content .flex .team__commands .card__img {
+  width: 100%;
+  height: 180px;
+  border-radius: 5px;
+}
+.section__content .flex .team__commands .card__name {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.section__content .flex .team__commands .card__position {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.section__content .flex .team__commands .card__link {
+  color: var(--base-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.section__content .flex .team__commands .card__link:hover .card__img {
+  transform: scale(1.1);
+}
+.section__content .flex.left {
+  justify-content: flex-start;
+}
+.section__content .flex.right {
+  justify-content: flex-end;
+}
+.section__content .flex__position {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+.projects__content {
+  margin-top: 40px;
+  display: flex;
+  gap: 25px;
+}
+.projects__content-line {
+  border: none;
+  width: 4px;
+  height: auto;
+  background-color: var(--base-color);
+  border-radius: 60px;
+  margin: 0 auto;
+}
+.projects__content__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.projects__content__block-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 22px;
+  color: var(--base-color);
+  font-weight: 600;
+}
+.projects__content__block-text {
+  font-size: 18px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.projects__works {
+  margin-top: 60px;
+}
+.projects__works__filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.projects__works__filter-btn {
+  border: 1px solid #232323;
+  border-radius: 60px;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-color);
+  background: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.projects__works__filter-btn.active {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  border: 1px solid var(--base-color);
+}
+.projects__works__filter-btn:hover {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  transition: background-color 0.3s, color 0.3s;
+  border-color: var(--base-color);
+}
+.projects__works__cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  color: var(--text-color);
+}
+.projects__works__cards.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects__works__cards .card {
+  height: 300px;
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.projects__works__cards .card img {
+  width: 100%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+.projects__works__cards .card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.projects__works__cards .card-link {
+  position: absolute;
+  bottom: 20px;
+  color: var(--base-color);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.projects__works__cards .card-link:hover {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.contact__us {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 40px;
+  width: 100%;
+}
+.contact__us__block {
+  width: 100%;
+}
+.contact__us__block .form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact__us__block .form textarea {
+  height: 120px;
+  resize: none;
+}
+.contact__us__block .form input, .contact__us__block .form textarea {
+  background-color: #f5f7fa;
+  border: none;
+  padding: 24px;
+  border-radius: 5px;
+  outline: none;
+}
+.contact__us__block .form input::-moz-placeholder, .contact__us__block .form textarea::-moz-placeholder {
+  color: var(--text-color);
+  font-family: "Gilroy", sans-serif;
+  opacity: 0.5;
+}
+.contact__us__block .form input::placeholder, .contact__us__block .form textarea::placeholder {
+  color: var(--text-color);
+  font-family: "Gilroy", sans-serif;
+  opacity: 0.5;
+}
+.contact__us__block .form button {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contact__us__block .form button:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.contact__us__block__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+}
+.contact__us__block__infos .row {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact__us__block__infos .row p.text {
+  opacity: 0.8;
+  font-weight: 500;
+}
+.contact__us__block__infos .row-title {
+  width: auto;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--base-color);
+}
+
+@media (max-width: 750px) {
+  * {
+    transition: all 1s;
+  }
+  .contact__us__block__infos {
+    margin-top: 25px;
+    gap: 15px;
+  }
+  .contact__us__block__infos .row {
+    gap: 5px;
+  }
+  .contact__us__block__infos .row-title {
+    font-size: 18px;
+  }
+  .contact__us {
+    gap: 25px;
+  }
+  .header__content .logo {
+    font-size: 16px;
+  }
+  .header__content .logo::before {
+    content: "Quantum Dev";
+  }
+  .header__content .contact {
+    width: 150px;
+    height: 42px;
+    font-size: 14px;
+  }
+  .contact__us {
+    flex-wrap: wrap;
+  }
+  .contact__us__block .form {
+    gap: 15px;
+  }
+  .contact__us__block .form input, .contact__us__block .form textarea {
+    padding: 15px;
+    border-radius: 2px;
+  }
+  .section.banner .banner-title {
+    font-size: 42px;
+    width: 100%;
+  }
+  .section .points {
+    gap: 10px;
+  }
+  .section .points .point span.text {
+    font-size: 14px;
+  }
+  .section__content .title {
+    font-size: 32px;
+  }
+  .section__content .subtitle {
+    font-size: 22px;
+  }
+  .section__content p.text {
+    font-size: 16px;
+  }
+  .section__content.projects p.text {
+    font-size: 16px;
+  }
+  .section__content .subtitle__text {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .section__content .flex {
+    width: 100%;
+  }
+  .section__content .flex.left, .section__content .flex .right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .section__content .flex__position {
+    width: 100%;
+  }
+  .section__content .flex__position .line {
+    width: 100%;
+  }
+  .section__content .flex__position .line svg {
+    width: 100%;
+  }
+  .section__content .flex.team {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .section__content .flex.team p.text {
+    margin-top: 25px;
+  }
+  .section__content .flex .team__commands {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section__content .flex .team__commands .card {
+    width: 100%;
+  }
+  .section__content .flex .team__commands .card__img {
+    width: 100%;
+    height: 180px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .projects__content {
+    flex-direction: column;
+  }
+  .projects__content-line {
+    display: none;
+  }
+  .projects__content__block-title {
+    font-size: 16px;
+  }
+  .projects__content__block-text {
+    font-size: 14px;
+  }
+  .projects__works__filter {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .projects__works__filter-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .projects__works__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .projects__works__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .projects__works__cards {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */

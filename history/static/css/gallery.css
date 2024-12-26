@@ -1,0 +1,224 @@
+/* ===== Global Styles ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #f5f7fa;
+    --accent-color: #317773;
+    --text-color: #232323;
+    --border-color: #23232331;
+    --font-family: 'Gilroy', sans-serif;
+}
+
+/* ===== Base Styles ===== */
+html,
+body {
+    font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.container__content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.container.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+/* ===== Content Info ===== */
+.container__content__info h1 {
+    font-size: 72px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+}
+
+.container__content__info p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ===== Gallery Styles ===== */
+.gallery {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery .card {
+        width: 100%;
+    }
+}
+
+/* ===== Card Styles ===== */
+.card {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    animation: cardFadeIn 0.6s ease forwards;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0px 4px 10px rgba(49, 119, 115, 0.5);
+}
+
+@keyframes cardFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Buttons ===== */
+.home-button,
+.back-button {
+    padding: 15px 25px;
+    color: var(--accent-color);
+    background-color: #fff;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover,
+.back-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.back-button.absolute {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+/* ===== Slider Styles ===== */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: calc(100% - 100px);
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.slider-container.hidden {
+    display: none;
+}
+
+/* ===== Fullscreen Overlay ===== */
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.fullscreen-overlay.active {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+
+.fullscreen-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fullscreen-overlay .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* ===== Swiper ===== */
+.swiper {
+    width: 100%;
+    max-width: 600px;
+    height: 80%;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* ===== Media Queries ===== */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 150px;
+        height: 100px;
+    }
+
+    .swiper {
+        max-width: 100%;
+        height: 70%;
+    }
+}
